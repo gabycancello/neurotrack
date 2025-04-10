@@ -29,7 +29,8 @@
 - Axios para requisições HTTP
 - Estilização com CSS moderno e componentes modulares
 - UI com inspiração *Neumorphism Design*
-
+  
+---
 <br>
 <br>
 
@@ -40,6 +41,8 @@
 - Autenticação com JWT
 - Middlewares personalizados
 - Arquitetura MVC
+
+---
 
 ### Testes
 <br>
@@ -52,6 +55,7 @@
 ![Testes de API no Insomnia](./client/src/assets/Insomnia.png)
 
 ---
+<br>
 
 ## Funcionalidades
 
@@ -63,6 +67,7 @@
 - Feedback visual e modais interativos
 
 ---
+<br>
 
 ## Como rodar localmente
 <br>
@@ -74,6 +79,9 @@
 - Node.js e npm instalados
 - MongoDB (pode ser local ou Atlas)
 
+---
+<br>
+
 ### Clonar o projeto
 
 <br>
@@ -82,6 +90,7 @@ git clone https://github.com/gabycancello/neurotrack.git
 cd neurotrack
 
 ---
+<br>
 
 ### Rodando o Backend
 
@@ -99,6 +108,8 @@ Crie um arquivo .env com:
 MONGO_URI=seu_link_mongodb
 JWT_SECRET=sua_chave_secreta
 <br>
+
+---
 
 ### Rodando o Frontend
 
@@ -128,6 +139,7 @@ VITE_API_URL=http://localhost:5000
 
 <br>
 <br>
+---
 
 ## Inspiração no Design Neomórfico
 
