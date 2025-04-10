@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Testar API de Freelancer</title>
+</head>
+<body>
+  <h2>Adicionar Freelancer</h2>
+  <button onclick="adicionarFreelancer()">Enviar</button>
+
+  <script>
+    function adicionarFreelancer() {
+      fetch('http://localhost:3001/api/freelancer/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: 'Carl Sagan',
+          skills: ['Node.js', 'MongoDB']
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log('Resposta da API:', data);
+        alert('Freelancer adicionado com sucesso!');
+      })
+      .catch(err => {
+        console.error('Erro:', err);
+        alert('Erro ao adicionar freelancer.');
+      });
+    }
+  </script>
+</body>
+</html>
