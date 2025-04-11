@@ -37,6 +37,15 @@ app.get('/example', (req, res) => {
   res.json({ message: 'Backend funcionando corretamente!' });
 });
 
+// ROTAS PARA FUNCIONAR NO RENDER
+app.get("/", (req, res) => {
+  res.send("API do NeuroTrack funcionando!");
+});
+
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 // Configurar WebSockets
 io.on("connection", (socket) => {
   console.log("Novo cliente conectado");
