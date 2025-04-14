@@ -130,7 +130,7 @@ const FreelaList = () => {
   const fetchFreelancers = async () => {
     try {
       console.log("Buscando freelancers...");
-      const response = await api.get("/api/freelancer");
+      const response = await api.get("/freelancer");
       console.log("Resposta completa:", response);
       setFreelancers(response.data);
     } catch (error) {
@@ -144,7 +144,7 @@ const FreelaList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await api.delete(`/api/freelancer/${id}`);
+      await api.delete(`/freelancer/${id}`);
       fetchFreelancers();
     } catch (error) {
       console.error("Erro ao deletar freelancer", error);
