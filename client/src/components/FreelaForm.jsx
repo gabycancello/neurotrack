@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes, useTheme } from "styled-components";
 import ModalComponent from "./ModalComponent";
+import api from "../api/axios";
 
 const fadeIn = keyframes`
   from {
@@ -104,12 +105,6 @@ const FreelaForm = ({ isOpen, onRequestClose, onSubmit, freelaToEdit = null }) =
     if (!name.trim() || !skills.trim()) return;
 
     try {
-      const url = freelaToEdit
-        ? `${import.meta.env.VITE_API_URL}/api/freelancer/update/${freelaToEdit._id}`
-        : `${import.meta.env.VITE_API_URL}/api/freelancer/add`;
-
-      const method = freelaToEdit ? "PUT" : "POST";
-
       const bodyData = {
         name,
         skills: skills.split(",").map((s) => s.trim()).filter(Boolean),
@@ -117,18 +112,17 @@ const FreelaForm = ({ isOpen, onRequestClose, onSubmit, freelaToEdit = null }) =
 
       console.log("Dados enviados:", bodyData);
 
-      const response = await fetch(url, {
-        method,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(bodyData),
-      });
+      let response;
 
-      if (!response.ok) throw new Error("Erro ao cadastrar freelancer");
+      if (freelaToEdit) {
+        response = await api.put(`/freelancer/update/${freelaToEdit._id}`, bodyData);
+      } else {
+        response = await api.post("/freelancer/add", bodyData);
+      }
 
-      const result = await response.json();
-      console.log("Freelancer cadastrado:", result);
+      console.log("Freelancer cadastrado:", response.data);
 
-      if (onSubmit) onSubmit(result);
+      if (onSubmit) onSubmit(response.data);
 
       setName("");
       setSkills("");
