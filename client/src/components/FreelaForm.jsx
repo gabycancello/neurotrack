@@ -59,13 +59,23 @@ const Input = styled.input`
   outline: none;
   font-size: 1em;
   background: ${({ theme }) => theme.inputBackground || theme.background};
-  color: ${({ theme }) => theme.text};
-  box-shadow: inset 6px 6px 12px ${({ theme }) => theme.shadowLight}, inset -6px -6px 12px ${({ theme }) => theme.shadowDark};
+  color: ${({ theme }) =>
+    theme.mode === "dark" ? "#f5f5f5" : theme.text}; // visibilidade melhor no dark
+  box-shadow: inset 6px 6px 12px ${({ theme }) => theme.shadowLight},
+              inset -6px -6px 12px ${({ theme }) => theme.shadowDark};
   transition: all 0.3s ease;
 
+  &::placeholder {
+    color: ${({ theme }) =>
+      theme.mode === "dark" ? "#aaa" : "#666"}; // contraste para placeholder também
+    opacity: 1;
+  }
+
   &:focus {
-    box-shadow: inset 4px 4px 8px ${({ theme }) => theme.shadowDark}, inset -4px -4px 8px ${({ theme }) => theme.shadowLight};
-    background: ${({ theme }) => theme.inputFocusBackground || theme.inputBackground};
+    box-shadow: inset 4px 4px 8px ${({ theme }) => theme.shadowDark},
+                inset -4px -4px 8px ${({ theme }) => theme.shadowLight};
+    background: ${({ theme }) =>
+      theme.inputFocusBackground || theme.inputBackground};
   }
 `;
 
