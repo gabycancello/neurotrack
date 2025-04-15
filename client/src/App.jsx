@@ -119,8 +119,8 @@ const App = () => {
       <GlobalStyle />
       <PageWrapper>
         <AppContainer>
-          <Button label="Toggle Dark Mode" onClick={toggleDarkMode} />
-          <Card title="Freelancer Task" description="Complete sua primeira tarefa!" />
+          <Button label="Dark Mode" onClick={toggleDarkMode} />
+          <Card title="NeuroTrack: Freelancer Task" description="Bem-Vindo! Complete sua primeira tarefa!" />
           <TaskList
             tasks={tasks}
             addTask={addTask}
