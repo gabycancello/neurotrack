@@ -22,7 +22,16 @@ const lightTheme = {
   taskShadow: "8px 8px 16px #bebebe, -8px -8px 16px #ffffff",
   taskShadowInset: "inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff",
   taskShadowInsetFocus: "inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff",
-  taskHighlight: "#4caf50"
+  taskHighlight: "#4caf50",
+
+  inputBackground: "#f0f0f0",
+  inputFocusBackground: "#ffffff",
+  text: "#333333",
+  buttonBackground: "#e0e0e0",
+  buttonText: "#333333",
+  shadow: "#bebebe",
+  shadowLight: "#ffffff",
+  shadowDark: "#d1d1d1"
 };
 
 const darkTheme = {
@@ -37,7 +46,16 @@ const darkTheme = {
   taskShadow: "8px 8px 16px #1a1a1a, -8px -8px 16px #3a3a3a",
   taskShadowInset: "inset 5px 5px 10px #1a1a1a, inset -5px -5px 10px #3a3a3a",
   taskShadowInsetFocus: "inset 3px 3px 6px #1a1a1a, inset -3px -3px 6px #3a3a3a",
-  taskHighlight: "#4caf50"
+  taskHighlight: "#4caf50",
+
+  inputBackground: "#2b2b2b",
+  inputFocusBackground: "#333333",
+  text: "#ffffff",
+  buttonBackground: "#3c3c3c",
+  buttonText: "#ffffff",
+  shadow: "#1a1a1a",
+  shadowLight: "#3a3a3a",
+  shadowDark: "#121212"
 };
 
 const GlobalStyle = createGlobalStyle`
