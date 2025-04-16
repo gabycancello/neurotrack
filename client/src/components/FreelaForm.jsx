@@ -49,7 +49,6 @@ const FormContainer = styled.div`
   
   color: ${({ theme }) => (theme.mode === "dark" ? "#f0f0f0" : "#333333")};
 }
-;
 
 const Input = styled.input`
   width: 100%;
