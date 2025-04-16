@@ -34,21 +34,19 @@ const FormContainer = styled.div`
 
   h3 {
     margin-bottom: 10px;
-    color: ${({ theme }) => theme.text};
     font-size: 1.3rem;
-    text-shadow: ${({ theme }) =>
-  theme.mode === "dark" ? "1px 1px 2px #000" : "1px 1px 2px #ccc"};
     padding: 10px;
-  border-radius: 12px;
-
-  background: ${({ theme }) =>
-    theme.mode === "dark"
-      ? "transparent"
-      : "linear-gradient(145deg, #e6e6e6, #ffffff)"};
-  box-shadow: ${({ theme }) =>
-    theme.mode === "dark"
-      ? "none"
-      : "4px 4px 8px #bebebe, -4px -4px 8px #ffffff"};
+    border-radius: 12px;
+    color: ${({ theme }) => theme.text};
+    text-shadow: 1px 1px 2px ${({ theme }) => theme.shadowLight};
+    background: ${({ theme }) =>
+      theme.mode === "dark"
+        ? "transparent"
+        : "linear-gradient(145deg, #e6e6e6, #ffffff)"};
+    box-shadow: ${({ theme }) =>
+      theme.mode === "dark"
+        ? "none"
+        : "4px 4px 8px #bebebe, -4px -4px 8px #ffffff"};
   }
 `;
 
