@@ -35,7 +35,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
-  background: "linear-gradient(145deg, #1a1a1a, #252525)",
+  background: "#1f1f1f linear-gradient(145deg, #1a1a1a, #252525)",
   color: "#ffffff",
   cardBackground: "#252525",
   cardColor: "#ddd",
@@ -43,7 +43,7 @@ const darkTheme = {
   cardShadowHover: "inset 5px 5px 9px #1a1a1a, inset -5px -5px 9px #2e2e2e",
   taskBackground: "#2a2a2a",
   taskText: "#fff",
-  taskShadow: "8px 8px 16px #1a1a1a, -8px -8px 16px #3a3a3a",
+  taskShadow: "1px 1px 2px #000, 0 0 4px #4caf50",
   taskShadowInset: "inset 5px 5px 10px #1a1a1a, inset -5px -5px 10px #3a3a3a",
   taskShadowInsetFocus: "inset 3px 3px 6px #1a1a1a, inset -3px -3px 6px #3a3a3a",
   taskHighlight: "#4caf50",
