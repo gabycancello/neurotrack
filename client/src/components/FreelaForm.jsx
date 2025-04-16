@@ -33,11 +33,10 @@ const FormContainer = styled.div`
   }
 
   h3 {
-    margin-bottom: 10px;
-    color: ${({ theme }) => theme.text};
-    font-size: 1.3rem;
-    text-shadow: 1px 1px 2 ${({ theme }) => theme.shadowLight};
-    padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px ${({ theme }) => theme.shadowLight};
+  padding: 10px;
   border-radius: 12px;
   background: ${({ theme }) =>
     theme.mode === "dark"
@@ -47,8 +46,10 @@ const FormContainer = styled.div`
     theme.mode === "dark"
       ? "4px 4px 8px #1a1a1a, -4px -4px 8px #2a2a2a"
       : "4px 4px 8px #bebebe, -4px -4px 8px #ffffff"};
-  }
-`;
+  
+  color: ${({ theme }) => (theme.mode === "dark" ? "#f0f0f0" : "#333333")};
+}
+;
 
 const Input = styled.input`
   width: 100%;
